@@ -1,0 +1,91 @@
+/* Top Section Background ---------------------------------- */
+
+.signinBgCover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  background: url("/public/Images/Mt-filter.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* #signin-card {
+  background-color:#2a3246;
+  opacity: 90%;
+  max-width: 700px;
+  margin: auto;
+  align-self: center;
+  align-content: center;
+  text-align: center;
+  align-content: center;
+  align-items: center important !;
+  display: 'flex';
+  justify-content: center;
+  flex-direction: row;
+  font-size: 1em;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+} */
+
+#signinFormButton {
+  margin-left: -2.5em;
+  text-align: center;
+  border: 0px;
+  border-radius: 0%;
+  background-color: #e1f1f9;
+  padding: 10px 20px;
+  color: #2a3246;
+  font-weight: bolder;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#signinFormButton:hover {
+  background-color:#eec06b;
+  padding: 9px 19px;
+  color:#2a3246;
+  font-weight: bolder;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}
+
+#loginCard {
+  /* background-color:#e1f1f9; */
+  max-width: 700px;
+  padding-top: 7rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+#loginCard h1 {
+  padding-bottom: 3rem;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  color:#eec06b;
+}
+
+#formLabel {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0%;
+  opacity: 70%;
+  background-color: #e1f1f9;
+  max-width: 700px;
+}
+
+#formLabel:hover {
+  border-width: 3px;
+  border-color:#eec06b;
+  background-color: white;
+  opacity: 100%;
+
+}
+
+#formLabelName {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: #e1f1f9;
+}
