@@ -1,11 +1,11 @@
-import Post from "../post/Post";
+// import Post from "../post/Post";
 
-export default function Posts() {
-	return (
-		<>
-			<div className="posts">
-				<Post />
-			</div>
-		</>
-	);
-}
+// export default function Posts() {
+// 	return (
+// 		<>
+// 			<div className="posts">
+// 				<Post />
+// 			</div>
+// 		</>
+// 	);
+// }

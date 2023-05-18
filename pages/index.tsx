@@ -3,15 +3,24 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/header/Header";
-import Posts from "@/components/posts/Posts";
-import Topbar from "@/components/posts/Posts";
-import Login from "@/components/login/login/Login";
+import Topbar from "@/components/topBar/Topbar";
+import Login from "@/components/login/Login";
 import About from "@/components/about/about";
 import Footer from "@/components/footer/Footer";
+import BookStore from "@/components/bookstore/Bookstore";
+
 
 export default function Home() {
 	return (
 		<>
+
+			<section id="topbar">
+				<Topbar />
+			
+				<div className="topbar">{/* <Posts /> */}</div>
+			</section>
+
+
 			<section id="homeSection">
 				<Header />
 			
@@ -28,10 +37,19 @@ export default function Home() {
 				<div className="about">{/* <Posts /> */}</div>
 			</section>
 			
+			
+
+
+			<section id="bookstore">
+				<BookStore />
+				<div className="bookstore">{/* <Posts /> */}</div>
+			</section>
+
 			<section id="footer">
 				<Footer />
 				<div className="footer">{/* <Posts /> */}</div>
 			</section>
+
 
 		</>
 	);
