@@ -11,6 +11,7 @@ import {
 	NavDropdown,
 	Nav,
 } from "react-bootstrap";
+import { useRouter } from "next/router";
 
 // Documentations for the functions used for this page
 // useContext Hook: https://reactjs.org/docs/hooks-reference.html#usecontext
@@ -23,9 +24,10 @@ import {
 // Responsive breakpoints in React-Bootstrap: https://react-bootstrap.github.io/layout/grid/#grid-props
 
 export default function Topbar() {
+	const router = useRouter();
 	//   let { getUserById } = useContext(UserContext);
 	//   let params = useParams();
-	//   let navigate = useNavigate()
+	  // let navigate = useNavigate()
 
 	//   const [user, setUser] = useState({
 	//     userId: 0,
@@ -58,10 +60,10 @@ export default function Topbar() {
 	//     console.log("clicked")
 	//   }
 
-	//   const handleChange = (event) => {
-	//     if (event.target.value === "") return;
-	//     navigate('Search/' + event.target.value)
-	//   }
+	const handleChange = (event: any) => {
+		if (event.target.value === "") return;
+		router.push(`/Search/${event.target.value}`);
+	  };
 
 	//   let Auth = localStorage.getItem("username");
 
@@ -168,7 +170,7 @@ export default function Topbar() {
 											placeholder="Search For A Blog"
 											className="d-sm-flex"
 											aria-label="Search"
-											//   onChange={handleChange}
+										    onChange={handleChange}
 										/>
 										<Button id="searchButton" variant="outline-success">
 											<img
