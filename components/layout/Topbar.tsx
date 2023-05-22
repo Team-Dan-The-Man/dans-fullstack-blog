@@ -12,6 +12,7 @@ import {
 	Nav,
 } from "react-bootstrap";
 import { useRouter } from "next/router";
+import { supabase } from "../lib/db";
 
 // Documentations for the functions used for this page
 // useContext Hook: https://reactjs.org/docs/hooks-reference.html#usecontext
@@ -64,6 +65,11 @@ export default function Topbar() {
 		if (event.target.value === "") return;
 		router.push(`/Search/${event.target.value}`);
 	  };
+
+	  async function signOut() {
+		const { error } = await supabase.auth.signOut()
+		if (error) console.log('Error logging out:', error.message)
+	  }
 
 	//   let Auth = localStorage.getItem("username");
 
@@ -147,6 +153,9 @@ export default function Topbar() {
 						<Nav.Link className="link" href="/Login">
 							LOGIN
 						</Nav.Link>
+						<Nav.Link className="link"  href="/" onClick={signOut}>
+                  LOG OUT
+                </Nav.Link>
 						<Nav.Link className="link" href="about">
 							ABOUT
 						</Nav.Link>

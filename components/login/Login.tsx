@@ -1,96 +1,96 @@
-import React, { useContext, useState } from "react";
-// import UserContext from "../../context/UserContext";
+import React, { useRef, useState } from "react";
 import { Form, Button, Col, Row } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
-// import "./login.css";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useRouter } from "next/router";
+import { supabase } from "../lib/db";
 
-{
-	/* Sign In Page Function */
-}
 function Login() {
-	const supabaseClient = useSupabaseClient();
+  
+  const emailInputRef = useRef<HTMLInputElement | null>(null);
+  const passwordInputRef = useRef<HTMLInputElement | null>(null);
 
-	// const [login, setLogin] = useState({
-	//   username: "",
-	//   password: "",
-	// });
+  const router = useRouter();
 
-	// let { Login } = useContext(UserContext);
-	// let { username, password } = login;
-	// let navigate = useNavigate();
+  async function handleSubmit(event: any) {
+    event.preventDefault();
 
-	// function handleChange(event) {
-	//   setLogin((preValue) => {
-	//     return { ...preValue, [event.target.name]: event.target.value };
-	//   });
-	// }
+    let enteredEmail: string;
+    let enteredPassword: string;
 
-	async function handleSubmit(event) {
-		event.preventDefault();
+    try {
+     
+      enteredEmail = emailInputRef.current?.value || "";
+      enteredPassword = passwordInputRef.current?.value || "";
+      
+      let { data, error } = await supabase.auth.signInWithPassword({
+        email: enteredEmail,
+        password: enteredPassword,
+      });
 
-		const response = await supabaseClient.auth.signInWithPassword();
+     
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(data);
+		router.push('/write')
+      }
+    }
+	 catch (error) {
+      console.log(error);
+    }
+  }
 
-		//  use the SUpabase Login functionality here with the input parameters from the user.
+  return (
+    <>
+      <div className="signinBgCover">
+        <div style={{ minHeight: "800px" }}>
+          <div className="text-center justify-content-center align-self-center">
+            {/* Sign In form section*/}
+            <div>
+              <Form id="loginCard" onSubmit={handleSubmit}>
+                <Row className=" justify-content-center" id="signin-card">
+                  <h1 className="text-center justify-content-center align-self-center">
+                    SIGN IN
+                  </h1>
 
-		// navigate(`/write`);
-		console.log(login);
-	}
+                  <Form.Group className="mb-3">
+                    <Form.Label id="formLabelName">Email</Form.Label>
+                    <Form.Control
+                      id="formLabel"
+                      type="email"
+                      name="email"
+                      ref={emailInputRef}
+                    />
+                  </Form.Group>
+                </Row>
 
-	return (
-		<>
-			<div className="signinBgCover">
-				<div style={{ minHeight: "800px" }}>
-					<div className="text-center justify-content-center align-self-center">
-						{/* Sign In form section*/}
-						<div>
-							<Form id="loginCard">
-								<Row className=" justify-content-center" id="signin-card">
-									<h1 className="text-center justify-content-center align-self-center">
-										SIGN IN
-									</h1>
+                <Row className=" justify-content-center" id="signin-card">
+                  <Form.Group className="mb-3">
+                    <Form.Label id="formLabelName">Password</Form.Label>
+                    <Form.Control
+                      id="formLabel"
+                      type="password"
+                      name="password"
+                      ref={passwordInputRef}
+                    />
+                  </Form.Group>
+                </Row>
 
-									<Form.Group className="mb-3">
-										<Form.Label id="formLabelName">User Name</Form.Label>
-										<Form.Control
-											id="formLabel"
-											type="username"
-											name="username"
-											// value={username}
-											// onChange={handleChange}
-										/>
-									</Form.Group>
-								</Row>
-
-								<Row className=" justify-content-center" id="signin-card">
-									<Form.Group className="mb-3">
-										<Form.Label id="formLabelName">Password</Form.Label>
-										<Form.Control
-											id="formLabel"
-											type="password"
-											name="password"
-											// value={password}
-											// onChange={handleChange}
-										/>
-									</Form.Group>
-								</Row>
-
-								<Row className="justify-content-center" id="signin-card">
-									<Form.Group className="col-1">
-										<Col xs={12} sm={4} md={4} lg={4}>
-											<Button id="signinFormButton" type="submit">
-												SUBMIT
-											</Button>
-										</Col>
-									</Form.Group>
-								</Row>
-							</Form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</>
-	);
+                <Row className="justify-content-center" id="signin-card">
+                  <Form.Group className="col-1">
+                    <Col xs={12} sm={4} md={4} lg={4}>
+                      <Button id="signinFormButton" type="submit">
+                        SUBMIT
+                      </Button>
+                    </Col>
+                  </Form.Group>
+                </Row>
+              </Form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Login;
