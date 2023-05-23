@@ -9,26 +9,26 @@ import About from "@/components/about/about";
 import Footer from "@/components/layout/Footer";
 import BookStore from "@/components/bookstore/Bookstore";
 import { Fragment } from "react";
-
-
+import WithAuth from "@/components/withauth/WithAuth";
 export default function Home() {
 	return (
 		<Fragment>
 			<Header />
 			<h1> Posts Will Be Here</h1>
+
+			<BookStore />
 		</Fragment>
 		// <>
 
 		// 	<section id="topbar">
 		// 		<Topbar />
-			
+
 		// 		<div className="topbar">{/* <Posts /> */}</div>
 		// 	</section>
 
-
 		// 	<section id="homeSection">
 		// 		<Header />
-			
+
 		// 		<div className="home">{/* <Posts /> */}</div>
 		// 	</section>
 
@@ -41,9 +41,6 @@ export default function Home() {
 		// 		<Login />
 		// 		<div className="about">{/* <Posts /> */}</div>
 		// 	</section>
-			
-			
-
 
 		// 	<section id="bookstore">
 		// 		<BookStore />
@@ -54,7 +51,6 @@ export default function Home() {
 		// 		<Footer />
 		// 		<div className="footer">{/* <Posts /> */}</div>
 		// 	</section>
-
 
 		// </>
 	);

@@ -1,6 +1,7 @@
 import { Button, Col, Row } from "react-bootstrap";
+import WithAuth from "../withauth/WithAuth";
 
-export default function BookStore() {
+function BookStore() {
 	return (
 		<>
 			<div>
@@ -202,3 +203,5 @@ export default function BookStore() {
 		</>
 	);
 }
+
+export default WithAuth(BookStore);
