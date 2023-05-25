@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Form, Button, Col, InputGroup, Row } from "react-bootstrap";
 import classes from "./write.module.css";
+import WithAuth from "../withauth/WithAuth";
 
 function AddPost(props) {
   const [isInvalid, setIsInvalid] = useState(false);
@@ -120,4 +121,4 @@ function AddPost(props) {
   );
 }
 
-export default AddPost;
+export default WithAuth(AddPost);

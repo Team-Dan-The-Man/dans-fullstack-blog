@@ -204,4 +204,4 @@ function BookStore() {
 	);
 }
 
-export default WithAuth(BookStore);
+export default BookStore;
