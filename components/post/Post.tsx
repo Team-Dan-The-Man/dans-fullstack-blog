@@ -1,103 +1,74 @@
-// import React, { useContext, useState, useEffect } from 'react';
-// import { Button } from "react-bootstrap"
-// import { useNavigate, Link } from "react-router-dom";
-// import PostContext from "../../context/PostContext";
-// import UserContext from "../../context/UserContext";
-// import Login from "../../pages/login/Login";
-// import SimpleDateTime from 'react-simple-timestamp-to-date';
-// import "./post.css";
+import React, { useState, useEffect, ReactElement } from "react";
+import { Button } from "react-bootstrap";
+import { deleteBlog, getAllBlogs } from "../lib/db";
+import { useRouter } from "next/router";
 
-// export default function Post() {
-//   let navigate = useNavigate()
-//   let { deletePost } = useContext(PostContext)
-//   let { getUserById } = useContext(UserContext);
+interface Blog {
+  id: number;
+  title: string;
+  description: string;
+  updated_at: string;
+}
 
-//   const [user, setUser] = useState({
-//     userId: 0,
-//     username: "",
-//     email: "",
-//     firstName: "",
-//     lastName: "",
-//     createdAt: "",
-//     updatedAt: "",
-//   });
+export default function Post(): ReactElement {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const router = useRouter();
 
-//   useEffect(() => {
-//     async function fetch() {
-//       await getUserById(1).then((user) =>
-//         setUser(user)
-//       );
-//       console.log(user);
-//     }
-//     fetch();
-//   }, [Login]);
+  useEffect(() => {
+    async function fetchData() {
+      await getAllBlogs().then((response) => setBlogs(response as Blog[]));
+      console.log(blogs);
+    }
+    fetchData();
+  }, []);
 
-//   function handleDeletePost(postId) {
-//     deletePost(postId)
-//     navigate('/')
-//     window.location.reload()
-//   }
+  function handleDeletePost(id: number): void {
+    deleteBlog(id);
+    router.reload();
+  }
 
-//   let Auth = localStorage.getItem("username");
+  if (!blogs) {
+    return <div>Loading...</div>;
+  }
 
-//   return (
-//     <PostContext.Consumer>
-//       {
-//         ({ postList }) => {
-//           return <>
-//             {postList.map((p) => {
-//               if (Auth === user.username) {
-//                 return (
-//                   <div className="post" key={p.postId}>
-//                     <div className="postInfo">
-//                       <a href={`/post/${p.postId}`} class="no-underline">
-//                         <span className="postTitle">
-//                           {p.title}
-//                         </span>
-//                       </a>
-//                       <hr />
-//                       <span className="postDate">
-//                         <SimpleDateTime dateFormat="MDY" dateSeparator="/" showTime='0'>{p.updatedAt}</SimpleDateTime>
-//                         <hr />
-//                         <SimpleDateTime dateFormat="MDY" showDate='0' timeSeparator=":" meridians="1">{p.updatedAt}</SimpleDateTime>
-//                       </span>
-//                     </div>
-//                     <p className="postDesc">
-//                       {p.post}
-//                     </p>
-//                     <div classname='postButtons'>
-//                       <a href={`/post/${p.postId}/Edit`}><Button className="glow-on-hover">Edit</Button></a>
-//                       <Button className="glow-on-hover" variant="danger" onClick={handleDeletePost.bind(this, p.postId)}>Delete</Button>
-//                     </div>
-//                   </div>
-//                 )
-//               }
-//               else {
-//                 return (
-//                   <div className="post" key={p.postId}>
-//                     <div className="postInfo">
-//                       <a href={`/post/${p.postId}`} class="no-underline">
-//                         <span className="postTitle">
-//                           {p.title}
-//                         </span>
-//                       </a>
-//                       <hr />
-//                       <span className="postDate">
-//                         <SimpleDateTime dateFormat="MDY" dateSeparator="/" showTime='0'>{p.updatedAt}</SimpleDateTime>
-//                         <hr />
-//                         <SimpleDateTime dateFormat="MDY" showDate='0' timeSeparator=":" meridians="1">{p.updatedAt}</SimpleDateTime>
-//                       </span>
-//                     </div>
-//                     <p className="postDesc">
-//                       {p.post}
-//                     </p>
-//                   </div>
-//                 )
-//               }
-//             })}
-//           </>
-//         }
-//       }
-//     </PostContext.Consumer>
-//   );
-// }
+  return (
+    <>
+      {blogs.map((b: Blog) => {
+        const humanReadableDate = new Date(b.updated_at).toLocaleDateString(
+          "en-US",
+          {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+            hour: "numeric",
+            minute: "numeric",
+          }
+        );
+        return (
+          <div className="post" key={b.id}>
+            <div className="postInfo">
+              <a href={`/posts/${b.id}`} className="no-underline">
+                <span className="postTitle">{b.title}</span>
+              </a>
+              <hr />
+              <span className="postDate">{humanReadableDate}</span>
+            </div>
+            <p className="postDesc">{b.description}</p>
+            <div className="postButtons">
+              <a href={`/edit/${b.id}`}>
+                <Button className="glow-on-hover">Edit</Button>
+              </a>
+              <Button
+                className="glow-on-hover"
+                variant="danger"
+                onClick={() => handleDeletePost(b.id)}
+              >
+                Delete
+              </Button>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+}
