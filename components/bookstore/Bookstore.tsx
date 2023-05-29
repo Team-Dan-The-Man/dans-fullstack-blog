@@ -1,45 +1,65 @@
+// Import necessary components from react-bootstrap for the page layout.
 import { Button, Col, Row } from "react-bootstrap";
+
+// Import the WithAuth component which likely handles authentication. This import is not used in the current code.
 import WithAuth from "../withauth/WithAuth";
 
+// Define a functional component named BookStore.
 function BookStore() {
 	return (
 		<>
-			<div>
-				<img
-					className="headerImg"
-					src={"/Images/bookstore-bg-banner.png"}
-					alt=""
-				/>
+			{/* Create a container div for the bookstore page. */}
 
-				<div className="caterLight">
-					<Row>
-						<Col id="bookImage">
-							<Col>
-								<img src={"/Images/deep.jpg"} alt="" height="450" />
-							</Col>
-							<Col>
-								<a href="https://www.amazon.com/Deep-Delta-journey-universe-Trilogy/dp/0989263665/ref=sr_1_1?crid=11JRZ9JPSYAU&keywords=Deep+Delta+T&qid=1676669690&sprefix=deep+delta+t%2Caps%2C79&sr=8-1">
-									<Button id="orderButtonLight">ORDER NOW</Button>
-								</a>
-							</Col>
-						</Col>
+			{/* Display a banner image for the bookstore. */}
+			<img
+				className="headerImg"
+				src={"/Images/bookstore-bg-banner.png"}
+				alt=""
+			/>
+
+			{/* Display a light-themed book card. */}
+			<div className="caterLight">
+				{/* Use a Bootstrap Row and Col to structure the content. */}
+				<Row>
+					{/* Left Col for the book image and order button. */}
+					<Col id="bookImage">
+						{/* Inner Col for the book image. */}
 						<Col>
-							<div id="bookSectionLight">
-								<h4 className="bookTitle"> Deep Delta T: </h4>
-								<p className="bookDetailLight"> (Book 1 of Delta T Trilogy)</p>
-								<p className="bookDescription">
-									This story, which takes place on another planet, explores how
-									it would be to find yourself in a place where there is no
-									separation from God, a place where everything is different
-									because of that. How will it look? How will you then live?
-									What will you be able to report back to the strictly
-									scientific people who sent you here from Earth?
-								</p>
-							</div>
+							<img src={"/Images/deep.jpg"} alt="" height="450" />
 						</Col>
-					</Row>
-				</div>
+						{/* Inner Col for the order button. */}
+						<Col>
+							<a href="https://www.amazon.com/Deep-Delta-journey-universe-Trilogy/dp/0989263665/ref=sr_1_1?crid=11JRZ9JPSYAU&keywords=Deep+Delta+T&qid=1676669690&sprefix=deep+delta+t%2Caps%2C79&sr=8-1">
+								{/* The order button that links to the book on Amazon. */}
+								<Button id="orderButtonLight">ORDER NOW</Button>
+							</a>
+						</Col>
+					</Col>
+					{/* Right Col for the book details. */}
+					<Col>
+						<div id="bookSectionLight">
+							<h4 className="bookTitle"> Deep Delta T: </h4>
+							<p className="bookDetailLight"> (Book 1 of Delta T Trilogy)</p>
+							<p className="bookDescription">
+								This story, which takes place on another planet, explores how
+								it would be to find yourself in a place where there is no
+								separation from God, a place where everything is different
+								because of that. How will it look? How will you then live?
+								What will you be able to report back to the strictly
+								scientific people who sent you here from Earth?
+							</p>
+						</div>
+					</Col>
+				</Row>
 			</div>
+
+			{/* From here on, the pattern repeats for each book with alternating light and dark themes. 
+			    Each book card contains an image, order button, and book details. 
+			    The only change is the content for each book, such as the image URL, Amazon link, and book description. */}
+
+		
+			
+			
 			<div className="caterDark">
 				<Row>
 					<Col id="bookImage">
