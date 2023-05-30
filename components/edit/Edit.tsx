@@ -9,11 +9,17 @@ interface Post {
   description: string;
 }
 
-type Blog = {
-    id?: number,
-  title: string;
-  description: string;
-};
+interface Blog {
+    title: string;
+    id?: number;
+    description?: string;
+  }
+
+// type Blog = {
+//     id?: number,
+//   title: string;
+//   description: string;
+// };
 
 function EditPost() {
   const [isInvalid, setIsInvalid] = useState(false);
@@ -69,15 +75,23 @@ function EditPost() {
       }
 
       function handleTitleChange(event: React.ChangeEvent<HTMLInputElement>) {
-        setBlog((prevBlog) => ({ ...prevBlog, title: event.target.value }));
+        setBlog((prevBlog) => ({
+          id: prevBlog?.id ?? 0, // use 0 as a default id
+          title: event.target.value,
+          description: prevBlog?.description ?? "", // use an empty string as a default description
+        }));
       }
-    
+      
       function handleDescriptionChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
-        setBlog((prevBlog) => ({ ...prevBlog, description: event.target.value }));
+        setBlog((prevBlog) => ({
+          id: prevBlog?.id ?? 0,
+          title: prevBlog?.title ?? "",
+          description: event.target.value,
+        }));
       }
 
   return (
-    <div className={classes.form1} xs={12} md={6} lg={4}>
+    <div className={classes.form1} >
       <form className={classes.form} onSubmit={sendPostHandler}>
         <div className={classes.row}>
           <div className={classes.control}>

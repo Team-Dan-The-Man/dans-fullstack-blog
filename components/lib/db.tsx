@@ -57,6 +57,23 @@ export async function updateBlog(blog: any) {
   console.log('Blog updated successfully:', data);
 }
 
+export async function searchBlogs(query: any) {
+  
+let { data: blogs, error } = await supabase
+.from('blogs')
+.select("*")
+// Filters
+.ilike('title', `%${query}%`)
+
+if (error) {
+  console.error('Error searching blogs:', error.message);
+  return;
+}
+
+console.log('Blog searched successfully:', blogs);
+return blogs;
+}
+
 
 export async function deleteBlog(id: number) {
   const { data, error } = await supabase.from("blogs").delete().eq("id", id);
