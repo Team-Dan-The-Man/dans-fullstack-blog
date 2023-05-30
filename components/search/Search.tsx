@@ -1,6 +1,6 @@
 import React, { useState, useEffect, ReactElement } from "react";
 import { Button } from "react-bootstrap";
-import { deleteBlog, getAllBlogs } from "../lib/db";
+import { deleteBlog, getAllBlogs, searchBlogs } from "../lib/db";
 import { useRouter } from "next/router";
 import { supabase } from "../lib/db";
 
@@ -11,9 +11,10 @@ interface Blog {
   updated_at: string;
 }
 
-export default function Post(): ReactElement {
+export default function SearchBlogs(): ReactElement {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const router = useRouter();
+  const filterData = router.query.slug;
 
   const [user, setSession] = useState<any | null>(null);
 
@@ -27,13 +28,15 @@ export default function Post(): ReactElement {
       fetch();
     }, []);
 
-  useEffect(() => {
-    async function fetchData() {
-      await getAllBlogs().then((response) => setBlogs(response as Blog[]));
-      console.log(blogs);
-    }
-    fetchData();
-  }, []);
+    useEffect(() => {
+        async function fetchData() {
+          const response = await searchBlogs(filterData);
+          setBlogs(response as unknown as Blog[]);
+          console.log(response)
+        }
+    
+        fetchData();
+      }, [filterData]);
 
   function handleDeletePost(id: number): void {
     deleteBlog(id);
