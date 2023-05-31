@@ -190,10 +190,10 @@ export default  function Topbar() {
                 LOG OUT
               </Nav.Link>
             )}
-            <Nav.Link className="link" href="about">
+            <Nav.Link className="link" href="/about">
               ABOUT
             </Nav.Link>
-            <Nav.Link className="link" href="bookstore">
+            <Nav.Link className="link" href="/bookstore">
               BOOK STORE
             </Nav.Link>
           </Nav>
@@ -217,7 +217,7 @@ export default  function Topbar() {
                     />
                     <Button id="searchButton" variant="outline-success">
                       <img
-                        src="Images/searchicon.png"
+                        src="/Images/searchicon.png"
                         height="20px"
                         alt="DanTheMan"
                       />

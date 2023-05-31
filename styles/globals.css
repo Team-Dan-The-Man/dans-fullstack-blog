@@ -765,3 +765,25 @@
     100% { background-position: 0 0; }
 }
  /**** end posts styles ***/
+
+ /**** start search blogs ***/
+
+
+
+
+
+ .postsContainer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px; /* optional, for spacing */
+  }
+
+
+
+  .searchBlogsContainer {
+	padding-top: 60px; /* adjust as needed */
+  }
+
+   /**** end search blogs ***/
+
+  
