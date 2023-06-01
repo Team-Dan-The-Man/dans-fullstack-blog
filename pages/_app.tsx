@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-bootstrap";
 import Layout from "@/components/layout/layout";
 import { SSRProvider } from "react-bootstrap";
-import Post from "@/components/post/Post";
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
