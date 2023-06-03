@@ -60,6 +60,7 @@ export default function Post(): ReactElement {
           }
         );
         return (
+          
           <div className="post" key={b.id}>
             <a href={`/posts/${b.id}`} className="no-underline">
               <div className="postInfo">
@@ -87,9 +88,9 @@ export default function Post(): ReactElement {
                     DELETE
                   </Button>
                 )}
-              </div>
-            
+              </div>           
           </div>
+          
 
           // <div className="post" key={b.id}>
           //   <div className="postInfo">

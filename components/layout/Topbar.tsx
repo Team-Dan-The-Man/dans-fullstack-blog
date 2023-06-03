@@ -10,6 +10,7 @@ import {
   Navbar,
   NavDropdown,
   Nav,
+  Container,
 } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { supabase } from "../lib/db";
@@ -176,24 +177,10 @@ export default function Topbar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="hamburger" />
         <Navbar.Collapse id="basic-navbar-nav">
-
           <Nav className="mr-auto smallNav">
             <Nav.Link className="link" href="/">
               HOME
             </Nav.Link>
-            <Nav.Link className="link" href="/Login">
-              LOGIN
-            </Nav.Link>
-            {user && (
-              <Nav.Link className="link" href="/write">
-                Write A Blog
-              </Nav.Link>
-            )}
-            {user && (
-              <Nav.Link className="link" href="/" onClick={signOut}>
-                LOG OUT
-              </Nav.Link>
-            )}
             <Nav.Link className="link" href="/about">
               ABOUT
             </Nav.Link>
@@ -201,17 +188,12 @@ export default function Topbar() {
               BOOKSTORE
             </Nav.Link>
           </Nav>
-          <NavDropdown id="basic-nav-dropdown" title="CONTACT">
-            <NavDropdown.Item id="dropdownContact">
-              345lemaire@gmail.com
-            </NavDropdown.Item>
-          </NavDropdown>
 
-
-          <div className="topRight">
+          {/* <div className="topRight"></div> */}
+          <div>
             <div id="searchBar">
               <Row>
-                <Col>
+                <Col sm={12}>
                   <Form className="d-flex">
                     <Form.Control
                       id="searchInput"
@@ -234,8 +216,30 @@ export default function Topbar() {
             </div>
           </div>
 
+          <NavDropdown id="basic-nav-dropdown" title="CONTACT">
+            <NavDropdown.Item id="dropdownContact">
+              345lemaire@gmail.com
+            </NavDropdown.Item>
+          </NavDropdown>
         </Navbar.Collapse>
       </Navbar>
+
+      <Navbar className="DansNavBar">
+          <Nav.Link id="danLink" href="/Login">
+            LOGIN
+          </Nav.Link>
+          {user && (
+            <Nav.Link id="danLink" href="/write">
+              NEW BLOG
+            </Nav.Link>
+          )}
+          {user && (
+            <Nav.Link id="danLink" href="/" onClick={signOut}>
+              LOG OUT
+            </Nav.Link>
+          )}
+        </Navbar>
+
     </>
   );
 }

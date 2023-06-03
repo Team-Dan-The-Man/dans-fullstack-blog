@@ -10,7 +10,6 @@ body {
 }
 
 /**** ABOUT PAGE STYLES ***/
-
 .homeSection {
   background-color: #ffe4b2;
 }
@@ -21,7 +20,6 @@ body {
 }
 
 /* *******ABOUT Component STYLES *************** */
-
 .aboutBgCover {
   display: flex;
   flex-direction: column;
@@ -98,11 +96,9 @@ body {
   padding: 3rem; /* 7rem */
   background-color: #e1f1f9;
 }
-
 /* ******* END ABOUT PAGE STYLES *************** */
 
 /******* FOOTER STYLES *****/
-
 #footer {
   background-color: #2a3246;
   text-align: center;
@@ -174,7 +170,6 @@ body {
 .footerLink:hover {
   color: #ffe4b2;
 }
-
 /* ******* END FOOTER STYLES *************** */
 
 /****** HEADER STYLES ********/
@@ -222,7 +217,6 @@ body {
 #carouselCaption p {
   color: #ffe4b2;
 }
-
 /*** END HEADER STYLES ****/
 
 /*** Post Styles ****/
@@ -291,7 +285,7 @@ body {
 .singlePostDesc {
   margin: 40px;
   margin-top: 70px;
-  color:#2a3246;
+  color: #2a3246;
   font-size: 20px;
   line-height: 30px;
   font-family: "Josefin Sans", sans-serif;
@@ -323,16 +317,29 @@ body {
   color: #e1f1f9;
 }
 
-#searchInput {
-  width: 250px;
+.DansNavBar {
+	background-color: #eec06b;
+	color:  #2a3246;
+	position: fixed;	
+	font-family: "Josefin Sans", sans-serif;
+	
+}
+
+#danLink {
+	padding-left: 1.5rem;
+	font-weight: 600;
+}
+
+#danLink:hover {
+font-size: 17px;
 }
 
 .topLeft,
 .topRight {
   flex: 3;
   display: flex;
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: center;
   margin-right: 2rem;
 }
 
@@ -366,7 +373,8 @@ body {
 
 .link {
   color: #e1f1f9 !important;
-  padding: 1rem;
+  padding: 3rem;
+  margin-top: 0.5rem;
 }
 
 .link:hover {
@@ -389,7 +397,7 @@ body {
   margin-left: 15px;
 }
 
-#searchBar {
+/* #searchBar {
   background-color: #2a3246;
   display: flex;
   padding: 9px 25px;
@@ -397,10 +405,20 @@ body {
   top: 180px;
   align-items: flex-start;
   z-index: 1;
+} */
+
+#searchBar {
+  display: flex;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
 }
 
 #searchInput {
-  max-width: 400px;
+  width: 250px;
+}
+
+#searchInput {
+  /* max-width: 500px; */
   max-height: 40px;
   font-family: "Abel", sans-serif;
   color: #ffe4b2;
@@ -411,8 +429,6 @@ body {
 }
 
 #searchInput:hover {
-  max-width: 400px;
-  max-height: 40px;
   border-color: #ffe4b2;
   color: #ffe4b2;
 }
@@ -421,6 +437,7 @@ body {
   border-color: transparent;
   background-color: transparent;
   display: flexbox;
+  margin-left: -5px;
 }
 
 #basic-navbar-nav {
@@ -432,6 +449,19 @@ body {
   color: #ffe4b2;
   background-color: #ffe4b2;
   margin-right: 1rem;
+}
+
+#basic-nav-dropdown {
+	padding-left: 2rem;
+	padding-top: 1rem;
+}
+
+#basic-nav-dropdown:hover {
+	color: #ffe4b2;
+}
+
+#dropdownContact {
+	background-color: #ffe4b2;
 }
 
 /**** end topbar styles ***/
@@ -653,11 +683,10 @@ body {
   top: 20%;
   font-size: 100px;
 }
-
 /**** end Book store styles ***/
 
-/**** posts styles ***/
 
+/**** posts styles ***/
 .post {
   width: 385px;
   margin: 40px 15px 15px 15px;
@@ -670,6 +699,7 @@ body {
   align-items: center;
   align-content: center;
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  justify-content: space-between;
 }
 
 .posts {
@@ -677,6 +707,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: 21px;
+  justify-content:space-around;
 }
 
 .postImg {
