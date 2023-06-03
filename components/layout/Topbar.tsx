@@ -27,25 +27,26 @@ import { useUser } from "@supabase/auth-helpers-react";
 // Responsive breakpoints in React-Bootstrap: https://react-bootstrap.github.io/layout/grid/#grid-props
 
 interface SessionData {
-	session: any;
-  }
+  session: any;
+}
 
-export default  function Topbar() {
-	const router = useRouter();
-	 const [user, setSession] = useState<any | null>(null);
+export default function Topbar() {
+  const router = useRouter();
+  const [user, setSession] = useState<any | null>(null);
 
-	useEffect(() => {
-		async function fetch() {
-			const { data: { user } } = await supabase.auth.getUser()
-			console.log(user);
-			setSession(user)
-		}
+  useEffect(() => {
+    async function fetch() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      console.log(user);
+      setSession(user);
+    }
 
-		fetch();
-	  }, []);
+    fetch();
+  }, []);
 
-  
-// }, []);
+  // }, []);
   //   let { getUserById } = useContext(UserContext);
   //   let params = useParams();
   // let navigate = useNavigate()
@@ -66,15 +67,15 @@ export default  function Topbar() {
   //     setExpanded(!expanded);
   //   };
 
-    // useEffect(() => {
-    //   async function fetch() {
-    //     await getUserById(1).then((user) =>
-    //       setUser(user)
-    //     );
-    //     console.log(user);
-    //   }
-    //   fetch();
-    // }, [Login]);
+  // useEffect(() => {
+  //   async function fetch() {
+  //     await getUserById(1).then((user) =>
+  //       setUser(user)
+  //     );
+  //     console.log(user);
+  //   }
+  //   fetch();
+  // }, [Login]);
 
   //   function logout() {
   //     localStorage.clear();
@@ -86,18 +87,18 @@ export default  function Topbar() {
     router.push(`/Search/${event.target.value}`);
   };
 
-   async function signOut() {
-	try {
-		const { error } = await supabase.auth.signOut();
-  
-		if (error) {
-		  throw new Error(error.message);
-		}
-  
-		// setSession(null);
-	  } catch (error) {
-		console.error('Failed to log out:', error);
-	  }
+  async function signOut() {
+    try {
+      const { error } = await supabase.auth.signOut();
+
+      if (error) {
+        throw new Error(error.message);
+      }
+
+      // setSession(null);
+    } catch (error) {
+      console.error("Failed to log out:", error);
+    }
   }
 
   //   let Auth = localStorage.getItem("username");
@@ -170,11 +171,12 @@ export default  function Topbar() {
       <Navbar id="top" expand="lg">
         <Navbar.Brand className="navbar-brand align-items-center" href="/">
           <div className="topLeft">
-            <img src="/Images/logofinal-navbar.png" height="120" alt="Evince" />
+            <img src="/Images/logofinal-navbar.png" height="100" alt="Evince" />
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" id="hamburger" />
         <Navbar.Collapse id="basic-navbar-nav">
+
           <Nav className="mr-auto smallNav">
             <Nav.Link className="link" href="/">
               HOME
@@ -182,9 +184,11 @@ export default  function Topbar() {
             <Nav.Link className="link" href="/Login">
               LOGIN
             </Nav.Link>
-			{ user && <Nav.Link className="link" href="/write">
-              Write A Blog
-            </Nav.Link>}
+            {user && (
+              <Nav.Link className="link" href="/write">
+                Write A Blog
+              </Nav.Link>
+            )}
             {user && (
               <Nav.Link className="link" href="/" onClick={signOut}>
                 LOG OUT
@@ -194,7 +198,7 @@ export default  function Topbar() {
               ABOUT
             </Nav.Link>
             <Nav.Link className="link" href="/bookstore">
-              BOOK STORE
+              BOOKSTORE
             </Nav.Link>
           </Nav>
           <NavDropdown id="basic-nav-dropdown" title="CONTACT">
@@ -202,6 +206,8 @@ export default  function Topbar() {
               345lemaire@gmail.com
             </NavDropdown.Item>
           </NavDropdown>
+
+
           <div className="topRight">
             <div id="searchBar">
               <Row>
@@ -227,6 +233,7 @@ export default  function Topbar() {
               </Row>
             </div>
           </div>
+
         </Navbar.Collapse>
       </Navbar>
     </>

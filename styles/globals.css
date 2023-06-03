@@ -1,90 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 /**** ABOUT PAGE STYLES ***/
 
 .homeSection {
-	background-color: #ffe4b2;
+  background-color: #ffe4b2;
 }
 
 .home {
-	display: flex;
-	background-color: rgba(212, 199, 181, 0.707);
+  display: flex;
+  background-color: rgba(212, 199, 181, 0.707);
 }
 
 /* *******ABOUT Component STYLES *************** */
 
 .aboutBgCover {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 0px;
-	background: url("/Images/pictwo-filter.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	color: #e1f1f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  padding: 1rem;
+  background: url("/Images/pictwo-filter.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #e1f1f9;
 }
 
 .aboutBgCover img {
-	margin-top: 5rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  margin-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .aboutBgCover .card {
-	margin-top: 7rem;
-	width: 26rem;
-	background-color: #2a3246;
-	opacity: 95%;
-	text-align: center;
+  margin-top: 7rem;
+  /* width: 26rem; */
+  background-color: #2a3246;
+  opacity: 95%;
+  text-align: center;
 }
 
 .aboutBgCover h3 {
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	margin-top: 2rem 2rem 0rem 2rem;
-	color: #ffe4b2;
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 2rem 2rem 0rem 2rem;
+  color: #ffe4b2;
 }
 
 .aboutBgCover h5 {
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	margin-top: 1.5rem;
-	margin-bottom: 4rem;
-	font-weight: lighter;
-	font-size: 30px;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  margin-top: 1.5rem;
+  margin-bottom: 4rem;
+  font-weight: lighter;
+  font-size: 30px;
 }
 
 #welcomeTitle h1 {
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	margin-top: 18rem;
-	margin-bottom: 1rem;
-	font-size: 80px;
-	color: #e1f1f9;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  margin-top: 18rem;
+  margin-bottom: 1rem;
+  font-size: 60px;
+  color: #e1f1f9;
 }
 
 #welcomeTitle h3 {
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	margin-bottom: 4rem;
-	color: #e1f1f9;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  margin-bottom: 4rem;
+  color: #e1f1f9;
 }
 
 .aboutBg {
-	background-color: rgba(212, 199, 181, 0.707);
+  background-color: rgba(212, 199, 181, 0.707);
 }
 
 .aboutContent {
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	font-weight: 200;
-	font-size: 25px;
-	line-height: 2rem;
-	margin-top: 15px;
-	padding-bottom: 10rem;
-	margin: 5rem;
-	cursor: pointer;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 2rem;
+  margin-top: 45px;
+  padding-bottom: 10rem;
+  margin: 4rem;
+  cursor: pointer;
 }
 
 #aboutBookImage {
-	padding: 7rem;
-	background-color: #e1f1f9;
+  padding: 3rem; /* 7rem */
+  background-color: #e1f1f9;
 }
 
 /* ******* END ABOUT PAGE STYLES *************** */
@@ -92,39 +104,39 @@
 /******* FOOTER STYLES *****/
 
 #footer {
-	background-color: #2a3246;
-	text-align: center;
-	width: 100%;
-	bottom: 0;
+  background-color: #2a3246;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
 }
 
 .p {
-	color: #ffe4b2;
-	font-size: 16px;
-	font-weight: 200;
-	padding-top: 0.5rem;
-	padding-bottom: 0.1rem;
-	font-family: "Josefin Sans", sans-serif;
+  color: #ffe4b2;
+  font-size: 16px;
+  font-weight: 200;
+  padding-top: 0.5rem;
+  padding-bottom: 0.1rem;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .logoFooter {
-	/* text-align: center; */
-	padding-top: 2rem;
-	align-items: left;
-	/* align-self: center;
+  /* text-align: center; */
+  padding-top: 2rem;
+  align-items: left;
+  /* align-self: center;
     justify-content: center; */
-	margin-left: 2rem;
-	margin-right: 2rem;
-	padding-bottom: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-bottom: 2rem;
 }
 
 .footerCenter {
-	text-align: center;
-	/* flex: 6; */
-	list-style: none;
-	text-decoration: none;
-	align-items: center;
-	align-self: center;
+  text-align: center;
+  /* flex: 6; */
+  list-style: none;
+  text-decoration: none;
+  align-items: center;
+  align-self: center;
 }
 
 /* .footerList {
@@ -136,296 +148,312 @@
   } */
 
 .footerListItem {
-	list-style: none;
-	margin-top: 1rem;
-	font-size: 18px;
-	font-weight: 300;
-	text-align: center;
-	justify-content: center;
-	cursor: pointer;
-	font-family: "Josefin Sans", sans-serif;
-	color: #e1f1f9;
-	text-decoration: none;
+  list-style: none;
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: "Josefin Sans", sans-serif;
+  color: #e1f1f9;
+  text-decoration: none;
 }
 
 .footerListItem:hover {
-	color: #ffe4b2;
-	font-family: "Josefin Sans", sans-serif;
-	text-decoration: none;
+  color: #ffe4b2;
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none;
 }
 
 .footerLink {
-	color: #e1f1f9;
-	text-decoration: none;
+  color: #e1f1f9;
+  text-decoration: none;
 }
 
 .footerLink:hover {
-	color: #ffe4b2;
+  color: #ffe4b2;
 }
 
 /* ******* END FOOTER STYLES *************** */
 
 /****** HEADER STYLES ********/
 .bgCover {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 0px;
-	background: url("/Images/dog-filter.png") no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	color: #e1f1f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  background: url("/Images/dog-filter.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #e1f1f9;
 }
 
 .bgCover img {
-	margin-top: 14rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  margin-top: 14rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
+/* .homeCoverEvinceLogo {
+	display: flex;
+	margin: 20px;
+} */
+
 #carouselPosition {
-	align-items: center;
-	justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel .right.carousel-control,
 .left.carousel-control {
-	display: none;
-	opacity: 0;
-	visibility: hidden;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 #carouselCaption {
-	padding-top: 6rem;
+  padding-top: 6rem;
 }
 
 #carouselCaption p {
-	color: #ffe4b2;
+  color: #ffe4b2;
 }
 
 /*** END HEADER STYLES ****/
 
 /*** Post Styles ****/
 .posts {
-	flex: 9;
-	display: flex;
-	flex-wrap: wrap;
-	margin: 21px;
+  flex: 9;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 21px;
 }
 
 .singlePost {
-	flex: 9;
+  flex: 9;
 }
 
 .singlePostWrapper {
-	padding: 20px;
-	padding-right: 0;
+  padding: 20px;
+  padding-right: 0;
 }
 
 .singlePostImg {
-	width: 100%;
-	height: 300px;
-	border-radius: 5px;
-	object-fit: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .singlePostTitle {
-	text-align: center;
-	margin: 10px;
-	font-size: 28px;
-	font-family: "Lora", sans-serif;
+  text-align: center;
+  margin: 10px;
+  font-size: 28px;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .singlePostEdit {
-	float: right;
-	font-size: 16px;
+  float: right;
+  font-size: 16px;
 }
 
 .singlePostIcon {
-	margin-left: 10px;
-	cursor: pointer;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .singlePostIcon:first-child {
-	color: teal;
+  color: teal;
 }
 .singlePostIcon:last-child {
-	color: tomato;
+  color: tomato;
 }
 
 .singlePostInfo {
-	margin-bottom: 20px;
-	display: flex;
-	justify-content: space-between;
-	font-size: 16px;
-	color: #be9656;
-	font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #97743d;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.singlePostdate {
+  font-size: smaller;
+  text-align: center;
 }
 
 .singlePostAuthor {
-	margin-left: 5px;
+  margin-left: 5px;
 }
 
 .singlePostDesc {
-	color: #666;
-	font-size: 18px;
-	line-height: 25px;
+  margin: 40px;
+  margin-top: 70px;
+  color:#2a3246;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
 }
 
 .singlePostDesc::first-letter {
-	margin-left: 20px;
-	font-size: 30px;
-	font-weight: 600;
+  font-size: 60px;
+  font-weight: 500;
+  font-family: "Josefin Sans", sans-serif;
 }
 /*** END Post Styles ****/
 
 /*** TOPBAR Styles ****/
 #root {
-	background-color: rgba(192, 176, 153, 0.707);
+  background-color: rgba(192, 176, 153, 0.707);
 }
 
 #top {
-	width: 100%;
-	height: 160px;
-	background-color: #2a3246;
-	position: sticky;
-	top: 0;
-	display: flex;
-	align-items: center;
-	z-index: 999;
-	font-family: "Josefin Sans", sans-serif;
-	color: #e1f1f9;
+  width: 100%;
+  height: 160px;
+  background-color: #2a3246;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  font-family: "Josefin Sans", sans-serif;
+  color: #e1f1f9;
+}
+
+#searchInput {
+  width: 250px;
 }
 
 .topLeft,
 .topRight {
-	flex: 3;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  flex: 3;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  margin-right: 2rem;
 }
 
 .topLeft img {
-	margin-left: 2rem;
-	margin-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 0rem;
 }
 
 .topCenter {
-	flex: 6;
+  flex: 6;
 }
 
 .topList {
-	display: flex;
-	justify-content: right;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  display: flex;
+  justify-content: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .topListItem {
-	margin-right: 40px;
-	font-size: 18px;
-	font-weight: 400;
-	cursor: pointer;
+  margin-right: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .topListItem:hover {
-	color: #ffe4b2;
+  color: #ffe4b2;
 }
 
 .link {
-	color: #e1f1f9 !important;
-	padding: 1rem;
+  color: #e1f1f9 !important;
+  padding: 1rem;
 }
 
 .link:hover {
-	color: #ffe4b2 !important;
+  color: #ffe4b2 !important;
 }
 
 .topImg {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	object-fit: cover;
-	margin-right: 15px;
-	cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 .topSearchIcon {
-	font-size: 18px;
-	color: #666;
-	cursor: pointer;
-	margin-left: 15px;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  margin-left: 15px;
 }
 
 #searchBar {
-	background-color: #2a3246;
-	display: "flex";
-	padding: 9px 25px;
-	position: sticky;
-	top: 180px;
-	align-items: flex-start;
-	z-index: 1;
+  background-color: #2a3246;
+  display: flex;
+  padding: 9px 25px;
+  position: sticky;
+  top: 180px;
+  align-items: flex-start;
+  z-index: 1;
 }
 
 #searchInput {
-	max-width: 400px;
-	max-height: 40px;
-	font-family: "Abel", sans-serif;
-	color: #ffe4b2;
-	border-color: #ffe4b2;
-	border-width: 1.5px;
-	border-radius: 0px;
-	background-color: transparent;
+  max-width: 400px;
+  max-height: 40px;
+  font-family: "Abel", sans-serif;
+  color: #ffe4b2;
+  border-color: #ffe4b2;
+  border-width: 1.5px;
+  border-radius: 0px;
+  background-color: transparent;
 }
 
 #searchInput:hover {
-	max-width: 400px;
-	max-height: 40px;
-	border-color: #ffe4b2;
-	color: #ffe4b2;
+  max-width: 400px;
+  max-height: 40px;
+  border-color: #ffe4b2;
+  color: #ffe4b2;
 }
 
 #searchButton {
-	border-color: transparent;
-	background-color: transparent;
+  border-color: transparent;
+  background-color: transparent;
+  display: flexbox;
 }
 
 #basic-navbar-nav {
-	background-color: #2a3246;
-	padding: 3rem;
+  background-color: #2a3246;
+  padding: 3rem;
 }
 
 #hamburger {
-	color: #ffe4b2;
-	background-color: #ffe4b2;
-	margin-right: 1rem;
+  color: #ffe4b2;
+  background-color: #ffe4b2;
+  margin-right: 1rem;
 }
 
 /**** end topbar styles ***/
-
 
 /**** Login Styles ***/
 
 /* Top Section Background ---------------------------------- */
 
 .signinBgCover {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-top: 0px;
-	background: url("/Images/Mt-filter.jpg") no-repeat center center fixed;
-	-webkit-background-size: cover; 
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-  }
-  
-  /* #signin-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  background: url("/Images/Mt-filter.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* #signin-card {
 	background-color:#2a3246;
 	opacity: 90%;
 	max-width: 700px;
@@ -441,349 +469,377 @@
 	font-size: 1em;
 	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   } */
-  
-  #signinFormButton {
-	margin-left: -2.5em;
-	text-align: center;
-	border: 0px;
-	border-radius: 0%;
-	background-color: #e1f1f9;
-	padding: 10px 20px;
-	color: #2a3246;
-	font-weight: bolder;
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	font-size: 25px;
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-  }
-  
-  #signinFormButton:hover {
-	background-color:#eec06b;
-	padding: 9px 19px;
-	color:#2a3246;
-	font-weight: bolder;
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-  }
-  
-  #loginCard {
-	/* background-color:#e1f1f9; */
-	max-width: 700px;
-	padding-top: 7rem;
-	margin: 1rem;
-	text-align: center;
-  }
-  
-  #loginCard h1 {
-	padding-bottom: 3rem;
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	color:#eec06b;
-  }
-  
-  #formLabel {
-	margin-bottom: 1.5rem;
-	padding: 0.5rem;
-	border-radius: 0%;
-	opacity: 70%;
-	background-color: #e1f1f9;
-	max-width: 700px;
-  }
-  
-  #formLabel:hover {
-	border-width: 3px;
-	border-color:#eec06b;
-	background-color: white;
-	opacity: 100%;
-  
-  }
-  
-  #formLabelName {
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	font-size: 25px;
-	color: #e1f1f9;
-  }
 
+#signinFormButton {
+  margin-left: -2.5em;
+  text-align: center;
+  border: 0px;
+  border-radius: 0%;
+  background-color: #e1f1f9;
+  padding: 10px 20px;
+  color: #2a3246;
+  font-weight: bolder;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
+#signinFormButton:hover {
+  background-color: #eec06b;
+  padding: 9px 19px;
+  color: #2a3246;
+  font-weight: bolder;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}
 
+#loginCard {
+  /* background-color:#e1f1f9; */
+  max-width: 700px;
+  padding-top: 7rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+#loginCard h1 {
+  padding-bottom: 3rem;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  color: #eec06b;
+}
+
+#formLabel {
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 0%;
+  opacity: 70%;
+  background-color: #e1f1f9;
+  max-width: 700px;
+}
+
+#formLabel:hover {
+  border-width: 3px;
+  border-color: #eec06b;
+  background-color: white;
+  opacity: 100%;
+}
+
+#formLabelName {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  color: #e1f1f9;
+}
 
 /**** end Login styles ***/
 
 /**** Book store styles ***/
 
-
-
-
 .headerImg {
-	width: 100%;
-	height: 400px;
-	margin-top: 0px;
-	object-fit: cover;
-	padding-top: 0%;
-	float: top;
-  }
-  
-  .caterLight {
-	border-top: none;
-	/* border-left: 1px solid white;
+  width: 100%;
+  height: 400px;
+  margin-top: 0px;
+  object-fit: cover;
+  padding-top: 0%;
+  float: top;
+}
+
+.caterLight {
+  border-top: none;
+  /* border-left: 1px solid white;
 	border-right: 1px solid white;
 	border-bottom: 1px solid white; */
-	padding: 5rem;
-	overflow: auto;
-	text-align: start;
-	background-color: #e1f1f9;
-  }
-  
-  .caterDark {
-	border-top: none;
-	/* border-left: 1px solid white;
+  padding: 5rem;
+  overflow: auto;
+  text-align: start;
+  background-color: #e1f1f9;
+}
+
+.caterDark {
+  border-top: none;
+  /* border-left: 1px solid white;
 	border-right: 1px solid white;
 	border-bottom: 1px solid white; */
-	padding: 5rem;
-	overflow: auto;
-	text-align: start;
-	background-color: #2a3246;
-  }
-  
-  .cater::after {
-	content: "";
-	clear: both;
-	display: table;
-  }
-  
-  #bookImage {
-	align-content: center;
-	text-align: center;
-  }
-  
-  #bookSectionLight {
-	padding-top: 1rem;
-	color: #2a3246;
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-  }
-  
-  #bookSectionDark {
-	padding-top: 1rem;
-	color:#e1f1f9;
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-  }
-  
-  .bookTitle {
-	font-size: 40px;
-  }
-  
-  .bookDescription {
-	font-size: 30px;
-	margin-top: 2rem;
-	font-weight: 200;
-  }
-  
-  .bookDetailLight {
-	color: #2a3246;
-	font-size: 20px;
-  }
-  
-  .bookDetailDark {
-	color:#e1f1f9;
-	font-size: 20px;
-  }
-  
-  #orderButtonLight {
-	background-color: #2a3246;
-	color:antiquewhite;
-	font-size: 20px;
-	padding: 1rem;
-	border-radius: 0%;
-	border-color: transparent;
-	margin-top: 2rem;
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	text-align: center;
-	align-items: center;
-  }
-  
-  #orderButtonDark {
-	background-color:#e1f1f9;
-	color:#2a3246;
-	font-size: 20px;
-	padding: 1rem;
-	border-radius: 0%;
-	border-color: transparent;
-	margin-top: 2rem;
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	text-align: center;
-	align-items: center;
-  }
-  
-  .headerTitles {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-family: "Lora", serif;
-	color: #444;
-  }
-  
-  .headerTitleSmb {
-	font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-	align-items: flex-start;
-	top: 18%;
-	color: white;
-  }
-  
-  .headerTitleLg {
-	position: absolute;
-	top: 20%;
-	font-size: 100px;
-  }
+  padding: 5rem;
+  overflow: auto;
+  text-align: start;
+  background-color: #2a3246;
+}
 
+.cater::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-  /**** end Book store styles ***/
+#bookImage {
+  align-content: center;
+  text-align: center;
+}
 
-   /**** posts styles ***/
+#bookSectionLight {
+  padding-top: 1rem;
+  color: #2a3246;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}
+
+#bookSectionDark {
+  padding-top: 1rem;
+  color: #e1f1f9;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+}
+
+.bookTitle {
+  font-size: 40px;
+}
+
+.bookDescription {
+  font-size: 30px;
+  margin-top: 2rem;
+  font-weight: 300;
+}
+
+.bookDetailLight {
+  color: #2a3246;
+  font-size: 20px;
+}
+
+.bookDetailDark {
+  color: #e1f1f9;
+  font-size: 20px;
+}
+
+#orderButtonLight {
+  background-color: #2a3246;
+  color: antiquewhite;
+  font-size: 20px;
+  padding: 1rem;
+  border-radius: 0%;
+  border-color: transparent;
+  margin-top: 2rem;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+}
+
+#orderButtonDark {
+  background-color: #e1f1f9;
+  color: #2a3246;
+  font-size: 20px;
+  padding: 1rem;
+  border-radius: 0%;
+  border-color: transparent;
+  margin-top: 2rem;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  text-align: center;
+  align-items: center;
+}
+
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lora", serif;
+  color: #2a3246;
+}
+
+.headerTitleSmb {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  align-items: flex-start;
+  top: 18%;
+  color: white;
+}
+
+.headerTitleLg {
+  position: absolute;
+  top: 20%;
+  font-size: 100px;
+}
+
+/**** end Book store styles ***/
+
+/**** posts styles ***/
 
 .post {
-    width: 385px;
-    margin: 0px 25px 40px 25px;
-    display: flex;
-    flex-direction: column;
-    border: solid black;
-    text-align: center;
-    align-items: center;
-  }
-
-  .posts{
-    flex: 9;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 21px;
+  width: 385px;
+  margin: 40px 15px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  /* border: solid black; */
+  background-color: rgba(224, 217, 204, 0.707);
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
 }
-  
-  .postImg {
-    width: 385px;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 7px;
-  }
-  
-  .postInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .postTitle {
-    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    margin-top: 15px;
-    cursor: pointer;
-    color: black;
-    text-decoration: none;
-  }
-  
-  .postDate {
-    font-family: "Lora", serif;
-    font-style: italic;
-    font-size: 13px;
-    font-weight: 400;
-    color: black;
-    margin-top: 15px;
-  }
-  
-  .postDesc {
-    font-family: "Varela Round", Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: black;
-    margin-top: 15px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-  }
 
-  a.no-underline {
-    text-decoration: none;
-  }
+.posts {
+  flex: 9;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 21px;
+}
 
- .glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #2a3246;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
+.postImg {
+  width: 385px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.postTitle {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 15px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.postDate {
+  font-family: "Josefin Sans", serif;
+  font-style: italic;
+  font-size: 13px;
+  font-weight: 400;
+  color: black;
+  margin-top: 15px;
+}
+
+.postDesc {
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+  margin-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+a.no-underline {
+  text-decoration: none;
+}
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #2a3246;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
 }
 
 .glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .glow-on-hover:active {
-    color: #2a3246
+  color: #2a3246;
 }
 
 .glow-on-hover:active:after {
-    background: transparent;
+  background: transparent;
 }
 
 .glow-on-hover:hover:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #2a3246;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #2a3246;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
- /**** end posts styles ***/
+/**** end posts styles ***/
 
- /**** start search blogs ***/
+/**** single post ***/
+.singleBgPostImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -80px;
+  margin-left: -30px;
+  font-size: 600px;
+  color: #2a3246;
+  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  /* padding: 1rem; */
+  background: url("https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-transform: uppercase;
+}
+/**** single post ***/
 
+/**** start search blogs ***/
 
+.postsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px; /* optional, for spacing */
+}
 
+.searchBlogsContainer {
+  padding-top: 60px; /* adjust as needed */
+}
 
-
- .postsContainer {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 20px; /* optional, for spacing */
-  }
-
-
-
-  .searchBlogsContainer {
-	padding-top: 60px; /* adjust as needed */
-  }
-
-   /**** end search blogs ***/
-
-  
+/**** end search blogs ***/

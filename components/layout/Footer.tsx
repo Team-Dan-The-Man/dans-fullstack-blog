@@ -12,7 +12,7 @@ export default function Footer() {
                 <a className="navbar-brand align-items-center" href="/">
                   <img
                     src={"/Images/logofinal-navbar.png"}
-                    height="120"
+                    height="100"
                     alt="Evince"
                   />
                 </a>
