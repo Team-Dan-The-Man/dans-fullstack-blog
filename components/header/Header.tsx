@@ -9,8 +9,8 @@ export default function Header() {
 						<div className="text-center justify-content-center align-self-center">
 							<Row>
 								<Col>
-									<div>
-										<img height="250" src="/Images/logofinal.png" alt="" />
+									<div className="homeCoverEvinceLogo">
+										<img width="400" src="/Images/logofinal.png" alt="" />
 									</div>
 									<br />
 									<br />
@@ -65,7 +65,7 @@ export default function Header() {
 											/>
 											<div id="carouselCaption">
 												<Carousel.Caption>
-													<p>Deep Delta</p>
+													<p>DEEP DELTA</p>
 												</Carousel.Caption>
 											</div>
 										</Carousel.Item>
@@ -78,7 +78,7 @@ export default function Header() {
 											/>
 											<div id="carouselCaption">
 												<Carousel.Caption>
-													<p>Drawing Mandalas</p>
+													<p>DRAWING MANDALAS</p>
 												</Carousel.Caption>
 											</div>
 										</Carousel.Item>
@@ -91,7 +91,7 @@ export default function Header() {
 											/>
 											<div id="carouselCaption">
 												<Carousel.Caption>
-													<p>Mission Earth</p>
+													<p>MISSION EARTH</p>
 												</Carousel.Caption>
 											</div>
 										</Carousel.Item>

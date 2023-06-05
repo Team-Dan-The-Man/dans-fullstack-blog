@@ -4,8 +4,6 @@ import { Row, Col, Card } from "react-bootstrap";
 export default function About() {
     return (
         <>
-        
-
             <section className="aboutBg">
                 <div className='aboutBgCover'>
                     <div className="container" style={{ minHeight: '800px' }}>
@@ -16,7 +14,7 @@ export default function About() {
                                     <h3>So good to see you in this website</h3>
                                 </Col>
                                 <Col>
-                                    <Card>
+                                    <Card className="danCard">
                                         <div>
                                             <img height="250" className="rounded-circle" src={'/Images/theman-square.png'} alt="Dan Lemaire" />
                                         </div>
@@ -32,10 +30,12 @@ export default function About() {
 
                 <div>
                     <Row>
-                        <Col id="aboutBookImage" xs={12} md={6} lg={6}>
+                        {/* changed sx to sm */}
+                        <Col id="aboutBookImage" sx={12} md={6} lg={6}>
                                 <img width='100%' src={'/Images/about-cover.png'} alt="Dan Lemaire" />
                         </Col>
-                        <Col xs={12} md={6} lg={6}>
+                        {/* changed sx to sm */}
+                        <Col sx={12} md={6} lg={6}>
                             <p className="aboutContent">
                                 My hope in presenting all of these books and blogs is to
                                 offer input to you on some level that will ultimately help your life make more sense, not only for you,
@@ -54,8 +54,7 @@ export default function About() {
                         </Col>
                     </Row>
                 </div>
-            </section>
-            
+            </section>            
         </>
-    );
+    )
 }

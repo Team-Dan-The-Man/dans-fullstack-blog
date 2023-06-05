@@ -48,7 +48,7 @@ function AddPost() {
           <label htmlFor="description">Write Out Your Blog</label>
           <textarea
             id="description"
-            rows="5"
+            rows="12"
             ref={descriptionInputRef}
           ></textarea>
         </div>

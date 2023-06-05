@@ -18,14 +18,16 @@ export default function Post(): ReactElement {
   const [user, setSession] = useState<any | null>(null);
 
   useEffect(() => {
-      async function fetch() {
-          const { data: { user } } = await supabase.auth.getUser()
-          console.log(user);
-          setSession(user)
-      }
+    async function fetch() {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      console.log(user);
+      setSession(user);
+    }
 
-      fetch();
-    }, []);
+    fetch();
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -58,28 +60,65 @@ export default function Post(): ReactElement {
           }
         );
         return (
+          
           <div className="post" key={b.id}>
-            <div className="postInfo">
-              <a href={`/posts/${b.id}`} className="no-underline">
+            <a href={`/posts/${b.id}`} className="no-underline">
+              <div className="postInfo">
                 <span className="postTitle">{b.title}</span>
+
+                <hr />
+                <span className="postDate">{humanReadableDate}</span>
+              </div>
+              <p className="postDesc">{b.description}</p>
+              <p>READ MORE</p>
+
               </a>
-              <hr />
-              <span className="postDate">{humanReadableDate}</span>
-            </div>
-            <p className="postDesc">{b.description}</p>
-            <div className="postButtons">
-             {user && <a href={`/edit/${b.id}`}>
-                <Button className="glow-on-hover">Edit</Button>
-              </a>}
-              { user && <Button
-                className="glow-on-hover"
-                variant="danger"
-                onClick={() => handleDeletePost(b.id)}
-              >
-                Delete
-              </Button>}
-            </div>
+              <div className="postButtons">
+                {user && (
+                  <a href={`/edit/${b.id}`}>
+                    <Button className="glow-on-hover">EDIT</Button>
+                  </a>
+                )}
+                {user && (
+                  <Button
+                    className="glow-on-hover"
+                    variant="danger"
+                    onClick={() => handleDeletePost(b.id)}
+                  >
+                    DELETE
+                  </Button>
+                )}
+              </div>           
           </div>
+          
+
+          // <div className="post" key={b.id}>
+          //   <div className="postInfo">
+          //     <a href={`/posts/${b.id}`} className="no-underline">
+          //       <span className="postTitle">{b.title}</span>
+          //     </a>
+          //     <hr />
+          //     <span className="postDate">{humanReadableDate}</span>
+          //   </div>
+          //   <p className="postDesc">{b.description}</p>
+
+          //   <div className="postButtons">
+          //     {user && (
+          //       <a href={`/edit/${b.id}`}>
+          //         <Button className="glow-on-hover">Edit</Button>
+          //       </a>
+          //     )}
+          //     {user && (
+          //       <Button
+          //         className="glow-on-hover"
+          //         variant="danger"
+          //         onClick={() => handleDeletePost(b.id)}
+          //       >
+          //         Delete
+          //       </Button>
+          //     )}
+          //   </div>
+          // </div>
         );
       })}
     </>
