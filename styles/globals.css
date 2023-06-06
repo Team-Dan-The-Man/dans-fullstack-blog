@@ -862,11 +862,28 @@ a.no-underline {
 
 /**** start search blogs ***/
 
+
+
 .postsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px; /* optional, for spacing */
 }
+
+/* For medium devices (small laptops, tablets: 1024px and up) */
+@media (max-width: 1024px) {
+  .postsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* For small devices (phones, small tablets: 768px and up) */
+@media (max-width: 768px) {
+  .postsContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 
 .searchBlogsContainer {
   padding-top: 60px; /* adjust as needed */
