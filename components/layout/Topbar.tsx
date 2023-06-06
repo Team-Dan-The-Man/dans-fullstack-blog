@@ -189,6 +189,13 @@ export default function Topbar() {
             </Nav.Link>
           </Nav>
 
+          <NavDropdown id="basic-nav-dropdown" title="CONTACT">
+            <NavDropdown.Item id="dropdownContact">
+              345lemaire@gmail.com
+            </NavDropdown.Item>
+          </NavDropdown>
+       
+
           {/* <div className="topRight"></div> */}
           <div>
             <div id="searchBar">
@@ -216,12 +223,7 @@ export default function Topbar() {
             </div>
           </div>
 
-          <NavDropdown id="basic-nav-dropdown" title="CONTACT">
-            <NavDropdown.Item id="dropdownContact">
-              345lemaire@gmail.com
-            </NavDropdown.Item>
-          </NavDropdown>
-        </Navbar.Collapse>
+          </Navbar.Collapse>
       </Navbar>
 
       <Navbar className="DansNavBar">
@@ -244,10 +246,4 @@ export default function Topbar() {
   );
 }
 
-{
-  /* //   return (
-//     <>
-//       {displayUser()}
-//     </>
-//   ) */
-}
+

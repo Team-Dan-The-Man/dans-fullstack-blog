@@ -452,8 +452,7 @@ font-size: 17px;
 }
 
 #basic-nav-dropdown {
-	padding-left: 2rem;
-	padding-top: 1rem;
+padding-top: .5rem;
 }
 
 #basic-nav-dropdown:hover {

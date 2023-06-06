@@ -91,34 +91,6 @@ export default function Post(): ReactElement {
               </div>           
           </div>
           
-
-          // <div className="post" key={b.id}>
-          //   <div className="postInfo">
-          //     <a href={`/posts/${b.id}`} className="no-underline">
-          //       <span className="postTitle">{b.title}</span>
-          //     </a>
-          //     <hr />
-          //     <span className="postDate">{humanReadableDate}</span>
-          //   </div>
-          //   <p className="postDesc">{b.description}</p>
-
-          //   <div className="postButtons">
-          //     {user && (
-          //       <a href={`/edit/${b.id}`}>
-          //         <Button className="glow-on-hover">Edit</Button>
-          //       </a>
-          //     )}
-          //     {user && (
-          //       <Button
-          //         className="glow-on-hover"
-          //         variant="danger"
-          //         onClick={() => handleDeletePost(b.id)}
-          //       >
-          //         Delete
-          //       </Button>
-          //     )}
-          //   </div>
-          // </div>
         );
       })}
     </>
