@@ -226,22 +226,14 @@ export default function Topbar() {
           </Navbar.Collapse>
       </Navbar>
 
-      <Navbar className="DansNavBar">
-          <Nav.Link id="danLink" href="/Login">
-            LOGIN
-          </Nav.Link>
-          {user && (
+	  {user && ( <Navbar className="DansNavBar">
             <Nav.Link id="danLink" href="/write">
               NEW BLOG
             </Nav.Link>
-          )}
-          {user && (
             <Nav.Link id="danLink" href="/" onClick={signOut}>
               LOG OUT
             </Nav.Link>
-          )}
-        </Navbar>
-
+        </Navbar>)}
     </>
   );
 }
