@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { useContext, useState, useEffect } from "react";
-// import UserContext from "../../context/UserContext";
-// import Login from "../../pages/login/login/Login";
+import { useState, useEffect } from "react";
 import {
   Button,
   Form,
@@ -9,13 +6,11 @@ import {
   Col,
   Navbar,
   NavDropdown,
-  Nav,
-  Container,
+  Nav
 } from "react-bootstrap";
 import { useRouter } from "next/router";
 import { supabase } from "../lib/db";
-import { Session } from "@supabase/supabase-js";
-import { useUser } from "@supabase/auth-helpers-react";
+
 
 // Documentations for the functions used for this page
 // useContext Hook: https://reactjs.org/docs/hooks-reference.html#usecontext
@@ -47,41 +42,7 @@ export default function Topbar() {
     fetch();
   }, []);
 
-  // }, []);
-  //   let { getUserById } = useContext(UserContext);
-  //   let params = useParams();
-  // let navigate = useNavigate()
 
-  //   const [user, setUser] = useState({
-  //     userId: 0,
-  //     username: "",
-  //     email: "",
-  //     firstName: "",
-  //     lastName: "",
-  //     createdAt: "",
-  //     updatedAt: "",
-  //   });
-
-  //   const [expanded, setExpanded] = useState(false);
-
-  //   const handleToggle = () => {
-  //     setExpanded(!expanded);
-  //   };
-
-  // useEffect(() => {
-  //   async function fetch() {
-  //     await getUserById(1).then((user) =>
-  //       setUser(user)
-  //     );
-  //     console.log(user);
-  //   }
-  //   fetch();
-  // }, [Login]);
-
-  //   function logout() {
-  //     localStorage.clear();
-  //     console.log("clicked")
-  //   }
 
   const handleChange = (event: any) => {
     if (event.target.value === "") return;
@@ -102,70 +63,6 @@ export default function Topbar() {
     }
   }
 
-  //   let Auth = localStorage.getItem("username");
-
-  //   function TopBar() {
-  //     // if (Auth === user.username) {
-  //       return (
-
-  /* <Navbar id="top" expand="lg">
-            <Navbar.Brand href="#home">
-              <div className="topLeft">
-                <Link to="/" class="navbar-brand align-items-center">
-                  <img
-                    src={
-                      process.env.PUBLIC_URL + "/Images/logofinal-navbar.png"
-                    }
-                    height="120"
-                    alt="Evince"
-                  />
-                </Link>
-              </div>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto smallNav">
-                <Nav.Link className="link" to="/" href="/">
-                  HOME
-                </Nav.Link>
-                <Nav.Link className="link" variant="link" to="/" href="/" onClick={logout}>
-                  LOG OUT
-                </Nav.Link>
-                <Nav.Link className="link" href="about">ABOUT</Nav.Link>
-                <Nav.Link className="link" to="/bookstore" href="bookstore">
-                  BOOK STORE
-                </Nav.Link>
-                <Nav.Link className="link" to="/write" href="write">
-                  WRITE A BLOG
-                </Nav.Link>
-              </Nav>
-              <div className="topRight">
-                <div id="searchBar">
-                  <Row>
-                    <Col >
-                      <Form className="d-flex">
-                        <Form.Control
-                          id="searchInput"
-                          type="search"
-                          placeholder="Search For A Blog"
-                          className="d-sm-flex"
-                          aria-label="Search"
-                          onChange={handleChange} />
-                        <Button id='searchButton' variant="outline-success">
-                          <img src={process.env.PUBLIC_URL + '/Images/searchicon.png'}
-                            height="20px" alt="DanTheMan" /></Button>
-                      </Form>
-                    </Col>
-                  </Row>
-                </div>
-              </div>
-
-            </Navbar.Collapse>
-          </Navbar>
-        </>
-      )
-    }
-    else { */
 
   return (
     <>

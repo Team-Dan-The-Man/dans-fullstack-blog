@@ -1,4 +1,3 @@
-// import "./about.css";
 import { Row, Col, Card } from "react-bootstrap";
 
 export default function About() {

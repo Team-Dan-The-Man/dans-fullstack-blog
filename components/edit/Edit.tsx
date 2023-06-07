@@ -15,11 +15,7 @@ interface Blog {
     description?: string;
   }
 
-// type Blog = {
-//     id?: number,
-//   title: string;
-//   description: string;
-// };
+
 
 function EditPost() {
   const [isInvalid, setIsInvalid] = useState(false);
