@@ -13,22 +13,7 @@
   background-size: cover;
 }
 
-/* #signin-card {
-  background-color:#2a3246;
-  opacity: 90%;
-  max-width: 700px;
-  margin: auto;
-  align-self: center;
-  align-content: center;
-  text-align: center;
-  align-content: center;
-  align-items: center important !;
-  display: 'flex';
-  justify-content: center;
-  flex-direction: row;
-  font-size: 1em;
-  font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-} */
+
 
 #signinFormButton {
   margin-left: -2.5em;
