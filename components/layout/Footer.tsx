@@ -33,7 +33,7 @@ export default function Footer() {
                   </Link>
                 </span>
                 <span className="footerListItem">
-                  <Link href="/" className="footerLink">
+                  <Link href="/bookstore" className="footerLink">
                     {" "}
                     BOOKSTORE{" "}
                   </Link>
