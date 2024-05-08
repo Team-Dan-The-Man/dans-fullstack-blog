@@ -44,7 +44,7 @@ export default function Footer() {
             </Col>
             <p className="p">
               Contact me: 345lemaire@gmail.com
-              <br />© 2023 Evince. All rights reserved | Created By: JYT WEB
+              <br />© 2023 Evince. All rights reserved | Created By: JYT SOFTWARE
               DEVELOPMENT & DESIGNS
             </p>
           </Row>
